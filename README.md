@@ -107,13 +107,14 @@ A cutting-edge AI-powered platform designed to optimize Walmart’s supply chain
     
     `bashpython ai_ml/model_training_pipeline.py`
 ## Quick Start Summary
--
-`bashgit clone https://github.com/lostboysrtk/WalmartWinners.git
+
+```bash
+git clone https://github.com/lostboysrtk/WalmartWinners.git
 cd walmart-sparkathon-analytics
 npm install
 pip install -r requirements.txt
 cp .env.example .env.local
-*# Edit .env.local to add your credentials*
-`npm run dev`
--
+# Edit .env.local to add your credentials
+npm run dev
+
 Visit [http://localhost:3000](http://localhost:3000/) and start exploring!
