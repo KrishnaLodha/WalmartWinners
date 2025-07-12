@@ -50,22 +50,23 @@ A cutting-edge AI-powered platform designed to optimize Walmart’s supply chain
 ## Steps
 
 1. Clone the repository:
-    
-    `bashgit clone https://github.com/your-username/walmart-sparkathon-analytics.git
+```bash
+    `bashgit clone https://github.com/lostboysrtk/walmart-sparkathon-analytics.git
     cd walmart-sparkathon-analytics`
-    
+  ```  
 2. Install dependencies:
-    
+```bash
     `bashnpm install
     pip install -r requirements.txt`
-    
+```
 3. Create **`.env.local`** file with:
-    
+```bash
     `textNEXT_PUBLIC_SUPABASE_URL=your_supabase_url
     NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
     SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
     DATABASE_URL=your_database_url
     OPENAI_API_KEY=your_openai_key  # Optional`
+```
     
 4. Setup database:
     - For production (Supabase):
@@ -108,12 +109,13 @@ A cutting-edge AI-powered platform designed to optimize Walmart’s supply chain
     `bashpython ai_ml/model_training_pipeline.py`
 ## Quick Start Summary
 
-`bashgit clone https://github.com/your-username/walmart-sparkathon-analytics.git
+```bash
+git clone https://github.com/lostboysrtk/walmart-sparkathon-analytics.git
 cd walmart-sparkathon-analytics
 npm install
 pip install -r requirements.txt
 cp .env.example .env.local
-*# Edit .env.local to add your credentials*
-npm run dev`
-
+# Edit .env.local to add your credentials
+npm run dev
+```
 Visit [http://localhost:3000](http://localhost:3000/) and start exploring!
