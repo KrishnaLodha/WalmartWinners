@@ -8,8 +8,9 @@ import { AuthProvider } from "@/components/auth-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Walmart Analytics Dashboard",
-  description: "Real-time inventory and sales analytics platform",
+  title: "WalSmart - The End of Stock Worries",
+  description:
+    "AI-powered inventory management platform that eliminates stockouts and optimizes inventory levels. From shortage to surplus, you're covered.",
     generator: 'v0.dev'
 }
 
