@@ -55,10 +55,10 @@ A cutting-edge AI-powered platform designed to optimize Walmart’s supply chain
     cd walmart-sparkathon-analytics`
   ```  
 2. Install dependencies:
-    ```bash
+```bash
     `bashnpm install
     pip install -r requirements.txt`
-    ```
+```
 3. Create **`.env.local`** file with:
 ```bash
     `textNEXT_PUBLIC_SUPABASE_URL=your_supabase_url
