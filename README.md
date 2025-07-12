@@ -51,7 +51,7 @@ A cutting-edge AI-powered platform designed to optimize Walmart’s supply chain
 
 1. Clone the repository:
     
-    `bashgit clone https://github.com/your-username/walmart-sparkathon-analytics.git
+    `bashgit clone https://github.com/lostboysrtk/WalmartWinners.git
     cd walmart-sparkathon-analytics`
     
 2. Install dependencies:
