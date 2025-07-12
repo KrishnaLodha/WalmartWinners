@@ -62,7 +62,7 @@ export function TopNavbar() {
               <Package className="h-5 w-5" />
             </div>
             <div className="hidden sm:block">
-              <h1 className="font-bold text-lg">Walmart Analytics Hub</h1>
+              <h1 className="font-bold text-lg">WalSmart Analytics Hub</h1>
             </div>
           </div>
 

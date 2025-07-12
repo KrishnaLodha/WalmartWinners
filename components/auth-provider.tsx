@@ -1,15 +1,13 @@
 "use client"
 
 import type React from "react"
-
 import { createContext, useContext, useState, useEffect } from "react"
 
 interface User {
   id: string
   name: string
   email: string
-  role: "admin" | "store_manager" | "analyst"
-  storeId?: string
+  role: string
 }
 
 interface AuthContextType {
@@ -21,43 +19,63 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
+// Mock users for demo
+const mockUsers: User[] = [
+  {
+    id: "1",
+    name: "Rajesh Kumar",
+    email: "rajesh.kumar@walsmart.com",
+    role: "store_manager",
+  },
+  {
+    id: "2",
+    name: "Priya Sharma",
+    email: "priya.sharma@walsmart.com",
+    role: "inventory_analyst",
+  },
+  {
+    id: "3",
+    name: "Amit Patel",
+    email: "amit.patel@walsmart.com",
+    role: "regional_director",
+  },
+  {
+    id: "4",
+    name: "Sneha Gupta",
+    email: "sneha.gupta@walsmart.com",
+    role: "data_scientist",
+  },
+]
+
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Check for existing session
-    const savedUser = localStorage.getItem("user")
-    if (savedUser) {
-      setUser(JSON.parse(savedUser))
+    // Check for stored user session
+    const storedUser = localStorage.getItem("walsmart_user")
+    if (storedUser) {
+      setUser(JSON.parse(storedUser))
     }
     setIsLoading(false)
   }, [])
 
   const login = async (email: string, password: string): Promise<boolean> => {
-    try {
-      const response = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      })
+    // Mock authentication - in real app, this would call an API
+    const foundUser = mockUsers.find((u) => u.email === email)
 
-      if (response.ok) {
-        const userData = await response.json()
-        setUser(userData.user)
-        localStorage.setItem("user", JSON.stringify(userData.user))
-        return true
-      }
-      return false
-    } catch (error) {
-      console.error("Login error:", error)
-      return false
+    if (foundUser && password === "demo123") {
+      setUser(foundUser)
+      localStorage.setItem("walsmart_user", JSON.stringify(foundUser))
+      return true
     }
+
+    return false
   }
 
   const logout = () => {
     setUser(null)
-    localStorage.removeItem("user")
+    localStorage.removeItem("walsmart_user")
   }
 
   return <AuthContext.Provider value={{ user, login, logout, isLoading }}>{children}</AuthContext.Provider>
