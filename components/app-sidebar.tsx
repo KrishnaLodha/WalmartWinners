@@ -1,18 +1,6 @@
 "use client"
 
-import {
-  BarChart3,
-  Bell,
-  Home,
-  Package,
-  Settings,
-  ShoppingCart,
-  TrendingUp,
-  Users,
-  Zap,
-  Info,
-  BookOpen,
-} from "lucide-react"
+import { BarChart3, Bell, Home, Package, Settings, ShoppingCart, TrendingUp, Users, Info, BookOpen } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
@@ -58,11 +46,6 @@ const menuItems = [
     title: "Demand Forecast",
     url: "/forecast",
     icon: TrendingUp,
-  },
-  {
-    title: "Promotions",
-    url: "/promotions",
-    icon: Zap,
   },
   {
     title: "Customers",
